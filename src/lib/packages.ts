@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { cacheLife } from "next/cache";
 import data from "./packages.json";
 
 export type Pkg = (typeof data)[number];
@@ -14,9 +15,11 @@ const localDoc = (slug: string) =>
 
 // GitHub の README を5分ごとに再取得。失敗時は content/ のコピーを使う
 export async function getDoc(slug: string): Promise<string> {
+  "use cache";
+  cacheLife({ stale: 300, revalidate: 300, expire: 3600 });
   let md: string;
   try {
-    const res = await fetch(`${RAW}/${slug}/main/README.md`, { next: { revalidate: 300 } });
+    const res = await fetch(`${RAW}/${slug}/main/README.md`);
     if (!res.ok) throw new Error(String(res.status));
     md = await res.text();
   } catch {
