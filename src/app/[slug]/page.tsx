@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Doc } from "@/components/doc";
@@ -5,6 +6,20 @@ import { Badge } from "@/components/ui/badge";
 import { getDoc, getPackage, packages } from "@/lib/packages";
 
 export const generateStaticParams = () => packages.map((p) => ({ slug: p.slug }));
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const p = getPackage(slug);
+  if (!p) return {};
+  const title = `${p.slug} (${p.name})`;
+  return {
+    title,
+    description: p.description,
+    alternates: { canonical: `/${slug}/` },
+    openGraph: { type: "article", title, description: p.description, url: `/${slug}/` },
+    twitter: { title, description: p.description },
+  };
+}
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
