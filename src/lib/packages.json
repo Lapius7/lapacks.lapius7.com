@@ -1,0 +1,138 @@
+[
+ {
+  "slug": "bin-cli",
+  "name": "@lapius/bin-cli",
+  "version": "0.0.0",
+  "description": "bin.lapius7.com（LapBin）の CLI クライアント",
+  "bin": [
+   "bin"
+  ]
+ },
+ {
+  "slug": "cli-othello",
+  "name": "@lapius/cli-othello",
+  "version": "0.0.0",
+  "description": "ターミナルで遊ぶオセロ。5 段階の AI と対戦できる（要 Python 3.9+）",
+  "bin": [
+   "othello"
+  ]
+ },
+ {
+  "slug": "clilap-codepush",
+  "name": "@lapius/clilap-codepush",
+  "version": "0.0.0",
+  "description": "codepush.clilap.org の CLI クライアント。ファイルのアップロード・取得・管理を TUI で操作（要 Python 3.9+）",
+  "bin": [
+   "codepush"
+  ]
+ },
+ {
+  "slug": "clilap",
+  "name": "@lapius/clilap",
+  "version": "0.0.0",
+  "description": "clilap.org（天気・チートシート・GitHub・DNS・ハッシュなど）をターミナルから使う CLI",
+  "bin": [
+   "clilap"
+  ]
+ },
+ {
+  "slug": "dela-cli",
+  "name": "@lapius/dela-cli",
+  "version": "0.0.0",
+  "description": "deploy.lapius7.com へローカルのポートを公開するトンネル CLI（dela）",
+  "bin": [
+   "dela"
+  ]
+ },
+ {
+  "slug": "go-uuid",
+  "name": "@lapius/go-uuid",
+  "version": "0.0.0",
+  "description": "アクセス時に UUID を生成して返すシンプルな HTTP サーバー",
+  "bin": [
+   "go-uuid"
+  ]
+ },
+ {
+  "slug": "lapacks",
+  "name": "@lapius/lapacks",
+  "version": "0.0.0",
+  "description": "@lapius のパッケージ（why・sca・laping など）をまとめて一覧・インストール・更新・削除できる管理 CLI",
+  "bin": [
+   "lapacks"
+  ]
+ },
+ {
+  "slug": "laping-lang",
+  "name": "@lapius/laping-lang",
+  "version": "0.0.0",
+  "description": "読んだ順に理解できて、間違いにすぐ気づけることを目指したプログラミング言語 Laping のインタプリタ（laping）",
+  "bin": [
+   "laping"
+  ]
+ },
+ {
+  "slug": "password-gl",
+  "name": "@lapius/password-gl",
+  "version": "0.0.0",
+  "description": "セキュアなパスワード / パスフレーズを1コマンドで生成する CLI（要 Python 3.9+）",
+  "bin": [
+   "password-gl",
+   "pgl"
+  ]
+ },
+ {
+  "slug": "repomix-auto",
+  "name": "@lapius/repomix-auto",
+  "version": "0.0.0",
+  "description": "Repomix のソースマップ生成を自動化する CLI（鮮度確認・config 作成・重いファイルの自動除外）",
+  "bin": [
+   "repomix-auto"
+  ]
+ },
+ {
+  "slug": "sca-cli",
+  "name": "@lapius/sca-cli",
+  "version": "0.0.0",
+  "description": "chatapp.lapius7.com のチャットをターミナルから使う CLI（sca）",
+  "bin": [
+   "sca"
+  ]
+ },
+ {
+  "slug": "tsbuild",
+  "name": "@lapius/tsbuild",
+  "version": "0.0.0",
+  "description": "Bun + TypeScript 開発サーバーをホットリロード付きで1コマンド起動する CLI（要 Python 3.9+）",
+  "bin": [
+   "tsbuild"
+  ]
+ },
+ {
+  "slug": "tssetup",
+  "name": "@lapius/tssetup",
+  "version": "0.0.0",
+  "description": "Bun + TypeScript フロントエンド環境を1コマンドで構築する CLI（要 Python 3.9+）",
+  "bin": [
+   "tssetup"
+  ]
+ },
+ {
+  "slug": "why",
+  "name": "@lapius/why",
+  "version": "0.0.0",
+  "description": "失敗したコマンドの原因と対処法を日本語で表示する CLI（オフライン・AI なし）",
+  "bin": [
+   "why"
+  ]
+ },
+ {
+  "slug": "ytdlpdownloader",
+  "name": "@lapius/ytdlpdownloader",
+  "version": "0.0.0",
+  "description": "yt-dlp を fzf のメニューで操作する動画・音声・画像ダウンローダー（コマンド: yd）",
+  "bin": [
+   "yd"
+  ]
+ }
+]
